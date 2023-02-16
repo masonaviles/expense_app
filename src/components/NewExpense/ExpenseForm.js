@@ -54,14 +54,14 @@ const ExpenseForm = (props) => {
       date: new Date(enteredDate)
     }
 
-    props.onSaveExpenseData();
+    props.onSaveExpenseData(expenseData);
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
   }
 
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
           <label>Title</label>
